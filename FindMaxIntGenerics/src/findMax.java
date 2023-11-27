@@ -5,7 +5,7 @@
 public class findMax {
     /*
      * @name: findMaxInt
-     * @description: takes in 3 integers and returns the largest of the 3.
+     * @desc: takes in 3 integers and returns the largest of the 3.
      * @param: Integer num1, Integer num2, Integer num3
      * @return: Integer max
      */

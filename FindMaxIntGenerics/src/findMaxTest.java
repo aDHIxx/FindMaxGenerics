@@ -20,6 +20,12 @@ public class findMaxTest {
         testMaxAtPosition("Test Case 3", t3Num1, t3Num2, t3Num3);
     }
 
+    /*
+     * @name: testMaxAtPosition
+     * @desc: takes in 3 integers and returns the largest of the 3.
+     * @param: String testName, Integer num1, Integer num2, Integer num3
+     * @return: void
+     */
     private static void testMaxAtPosition(String testName, Integer num1, Integer num2, Integer num3) {
         Integer result = findMax.findMaxInt(num1, num2, num3);
         System.out.println(testName + " - Max: " + result);
