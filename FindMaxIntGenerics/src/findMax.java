@@ -22,4 +22,24 @@ public class findMax {
 
         return max;
     }
+
+    /*
+     * @name: findMaxFloat
+     * @desc: takes in 3 floats and returns the largest of the 3.
+     * @param: Float num1, Float num2, Float num3
+     * @return: Float max
+     */
+    public static Float findMaxFloat(Float num1, Float num2, Float num3) {
+        Float max = num1;
+
+        if (num2.compareTo(max) > 0) {
+            max = num2;
+        }
+
+        if (num3.compareTo(max) > 0) {
+            max = num3;
+        }
+
+        return max;
+    }
 }

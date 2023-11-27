@@ -1,33 +1,66 @@
 public class findMaxTest {
 
     public static void main(String[] args) {
+
+        System.out.println("Integer Test Cases");
+
         // Test Case 1: Max at 1st position
-        Integer t1Num1 = 3;
-        Integer t1Num2 = 2;
-        Integer t1Num3 = 1;
-        testMaxAtPosition("Test Case 1", t1Num1, t1Num2, t1Num3);
+        Integer t1Int1 = 3;
+        Integer t1Int2 = 2;
+        Integer t1Int3 = 1;
+        testMaxAtPosition("Test Case 1", t1Int1, t1Int2, t1Int3);
 
         // Test Case 2: Max at 2nd position
-        Integer t2Num1 = 4;
-        Integer t2Num2 = 5;
-        Integer t2Num3 = 3;
-        testMaxAtPosition("Test Case 2", t2Num1, t2Num2, t2Num3);
+        Integer t2Int1 = 4;
+        Integer t2Int2 = 5;
+        Integer t2Int3 = 3;
+        testMaxAtPosition("Test Case 2", t2Int1, t2Int2, t2Int3);
 
         // Test Case 3: Max at 3rd position
-        Integer t3Num1 = 6;
-        Integer t3Num2 = 7;
-        Integer t3Num3 = 8;
-        testMaxAtPosition("Test Case 3", t3Num1, t3Num2, t3Num3);
+        Integer t3Int1 = 6;
+        Integer t3Int2 = 7;
+        Integer t3Int3 = 8;
+        testMaxAtPosition("Test Case 3", t3Int1, t3Int2, t3Int3);
+
+        System.out.println("Float Test Cases");
+
+        // Test Case 1: Max at 1st position
+        Float t1Float1 = 3.5f;
+        Float t1Float2 = 2.2f;
+        Float t1Float3 = 1.0f;
+        testMaxAtPosition("Test Case 1", t1Float1, t1Float2, t1Float3);
+
+        // Test Case 2: Max at 2nd position
+        Float t2Float1 = 4.8f;
+        Float t2Float2 = 5.5f;
+        Float t2Float3 = 3.1f;
+        testMaxAtPosition("Test Case 2", t2Float1, t2Float2, t2Float3);
+
+        // Test Case 3: Max at 3rd position
+        Float t3Float1 = 6.7f;
+        Float t3Float2 = 7.2f;
+        Float t3Float3 = 8.0f;
+        testMaxAtPosition("Test Case 3", t3Float1, t3Float2, t3Float3);
     }
 
     /*
      * @name: testMaxAtPosition
      * @desc: takes in 3 integers and returns the largest of the 3.
-     * @param: String testName, Integer num1, Integer num2, Integer num3
+     * @param: String testName, Integer int1, Integer int2, Integer int3
      * @return: void
      */
-    private static void testMaxAtPosition(String testName, Integer num1, Integer num2, Integer num3) {
-        Integer result = findMax.findMaxInt(num1, num2, num3);
+    private static void testMaxAtPosition(String testName, Integer int1, Integer int2, Integer int3) {
+        Integer result = findMax.findMaxInt(int1, int2, int3);
+        System.out.println(testName + " - Max: " + result);
+    }
+    /*
+     * @name: testMaxAtPosition
+     * @desc: takes in 3 floats and returns the largest of the 3.
+     * @param: String testName, Float float1, Float float2, Float float3
+     * @return: void
+     */
+    private static void testMaxAtPosition(String testName, Float float1, Float float2, Float float3) {
+        Float result = findMax.findMaxFloat(float1, float2, float3);
         System.out.println(testName + " - Max: " + result);
     }
 }
