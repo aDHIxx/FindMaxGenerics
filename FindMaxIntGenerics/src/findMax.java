@@ -42,4 +42,23 @@ public class findMax {
 
         return max;
     }
+    /*
+     * @name: findMaxString
+     * @desc: takes in 3 strings and returns the largest of the 3.
+     * @param: String str1, String str2, String str3
+     * @return: String max
+     */
+    public static String findMaxString(String str1, String str2, String str3) {
+        String max = str1;
+
+        if (str2.compareTo(max) > 0) {
+            max = str2;
+        }
+
+        if (str3.compareTo(max) > 0) {
+            max = str3;
+        }
+
+        return max;
+    }
 }

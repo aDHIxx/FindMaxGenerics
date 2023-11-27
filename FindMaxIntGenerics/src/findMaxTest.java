@@ -41,6 +41,24 @@ public class findMaxTest {
         Float t3Float2 = 7.2f;
         Float t3Float3 = 8.0f;
         testMaxAtPosition("Test Case 3", t3Float1, t3Float2, t3Float3);
+
+        // Test Case 1: Max at 1st position
+        String test1Str1 = "Apple";
+        String test1Str2 = "Peach";
+        String test1Str3 = "Banana";
+        testMaxAtPosition("Test Case 1", test1Str1, test1Str2, test1Str3);
+
+        // Test Case 2: Max at 2nd position
+        String test2Str1 = "Cherry";
+        String test2Str2 = "Grapes";
+        String test2Str3 = "Apple";
+        testMaxAtPosition("Test Case 2", test2Str1, test2Str2, test2Str3);
+
+        // Test Case 3: Max at 3rd position
+        String test3Str1 = "Orange";
+        String test3Str2 = "Lemon";
+        String test3Str3 = "Strawberry";
+        testMaxAtPosition("Test Case 3", test3Str1, test3Str2, test3Str3);
     }
 
     /*
@@ -61,6 +79,16 @@ public class findMaxTest {
      */
     private static void testMaxAtPosition(String testName, Float float1, Float float2, Float float3) {
         Float result = findMax.findMaxFloat(float1, float2, float3);
+        System.out.println(testName + " - Max: " + result);
+    }
+    /*
+     * @name: testMaxStringAtPosition
+     * @desc: takes in 3 strings and prints the lexicographically largest of the 3.
+     * @param: String testName, String str1, String str2, String str3
+     * @return: void
+     */
+    private static void testMaxAtPosition(String testName, String str1, String str2, String str3) {
+        String result = findMax.findMaxString(str1, str2, str3);
         System.out.println(testName + " - Max: " + result);
     }
 }
