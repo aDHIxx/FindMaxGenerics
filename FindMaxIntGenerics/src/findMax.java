@@ -1,45 +1,34 @@
-/*
- * @name: findMax
- * @desc: Generic class that takes in 3 values of a Comparable type and provides methods to find the maximum.
- */
-class findMax<T extends Comparable<T>> {
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Optional;
 
-    T val1;
-    T val2;
-    T val3;
+public class findMax<T extends Comparable<T>> {
+
+    private T[] values;
 
     /*
      * @name: findMax
      * @desc: Parameter constructor for findMax class.
-     * @param: T val1, T val2, T val3
+     * @param: T... values
      */
-    findMax(T val1, T val2, T val3) {
-        this.val1 = val1;
-        this.val2 = val2;
-        this.val3 = val3;
+    public findMax(T... values) {
+        this.values = values;
     }
 
     /*
      * @name: findMaxValue
-     * @desc: Static method to find the largest of three Comparable values.
-     * @param: T val1, T val2, T val3
-     * @return: T max
+     * @desc: Static method to find the largest of Comparable values using options and sorting.
+     * @return: Optional<T> max
      */
-    static <T extends Comparable<T>> T findMaxValue(T val1, T val2, T val3) {
-        T max = val1;
-
-        if (val2.compareTo(max) > 0) {
-            max = val2;
+    public Optional<T> findMaxValue() {
+        if (values.length == 0) {
+            return Optional.empty();
         }
 
-        if (val3.compareTo(max) > 0) {
-            max = val3;
-        }
+        // Use sorting to find the maximum
+        Arrays.sort(values, Comparator.reverseOrder());
 
-        return max;
-    }
-
-    static <T extends Comparable<T>> T testMaximum(T val1, T val2, T val3) {
-        return findMaxValue(val1, val2, val3);
+        // Return the maximum value
+        return Optional.of(values[0]);
     }
 }
