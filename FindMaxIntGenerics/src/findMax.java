@@ -31,4 +31,13 @@ public class findMax<T extends Comparable<T>> {
         // Return the maximum value
         return Optional.of(values[0]);
     }
+    /*
+     * @name: printMax
+     * @desc: Generic method to print the maximum value to standard output.
+     * @param: T max
+     * @return: void
+     */
+    public static <T> void printMax(T max) {
+        System.out.println("Max: " + max);
+    }
 }
